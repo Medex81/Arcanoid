@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://uo3ktlqi1ioi"]
+
+[ext_resource type="Script" path="res://assets/items/locations/ball.gd" id="1_epuy6"]
+[ext_resource type="Texture2D" uid="uid://ubc7tqkl8n41" path="res://assets/textures/main/ballBlue.png" id="2_f62lq"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_aiinm"]
+friction = 0.0
+bounce = 1.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jeidu"]
+
+[node name="ball" type="Node2D"]
+script = ExtResource("1_epuy6")
+item_name = "ball"
+item_count = -1
+damage = 1
+send_to_groups = Array[int]([0, 1])
+
+[node name="ball" type="RigidBody2D" parent="."]
+mass = 0.01
+physics_material_override = SubResource("PhysicsMaterial_aiinm")
+gravity_scale = 0.0
+max_contacts_reported = 1
+contact_monitor = true
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ball"]
+shape = SubResource("CircleShape2D_jeidu")
+
+[node name="Sprite2D" type="Sprite2D" parent="ball"]
+texture = ExtResource("2_f62lq")
+region_rect = Rect2(228, 412.5, 21, 25)
+region_filter_clip_enabled = true
+
+[connection signal="body_entered" from="ball" to="." method="calc_collision"]

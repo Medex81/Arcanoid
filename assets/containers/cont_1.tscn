@@ -1,0 +1,19 @@
+[gd_scene load_steps=6 format=3 uid="uid://bjolafm68qdcg"]
+
+[ext_resource type="PackedScene" uid="uid://dgxduc8e3we6m" path="res://assets/items/rewards/gold_coin.tscn" id="1_c7odb"]
+[ext_resource type="Script" path="res://assets/containers/cont_1.gd" id="1_gyeo3"]
+[ext_resource type="PackedScene" uid="uid://cr47db54luexl" path="res://assets/items/rewards/silver_coin.tscn" id="3_0nh66"]
+[ext_resource type="PackedScene" uid="uid://h7bk7gfn4c3p" path="res://assets/items/rewards/ice_coin.tscn" id="4_iqdgr"]
+[ext_resource type="PackedScene" uid="uid://c1grisyu2e3nm" path="res://assets/items/rewards/ruby_coin.tscn" id="5_2wvb0"]
+
+[node name="container" type="Node2D"]
+script = ExtResource("1_gyeo3")
+max_drop_count = 3
+
+[node name="gold_coin" parent="." instance=ExtResource("1_c7odb")]
+
+[node name="ice_coin" parent="." instance=ExtResource("4_iqdgr")]
+
+[node name="ruby_coin" parent="." instance=ExtResource("5_2wvb0")]
+
+[node name="silver_coin" parent="." instance=ExtResource("3_0nh66")]

@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://dgxduc8e3we6m"]
+
+[ext_resource type="Script" path="res://assets/items/rewards/gold_coin.gd" id="1_e6d5t"]
+[ext_resource type="Texture2D" uid="uid://kf1yu2e27q24" path="res://assets/textures/main/element_yellow_polygon_glossy.png" id="2_xt6c4"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_aiinm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e22st"]
+size = Vector2(45, 44)
+
+[node name="gold_coin" type="Node2D"]
+position = Vector2(0, 1)
+script = ExtResource("1_e6d5t")
+item_name = "gold_coin"
+drop_probability = 10
+hitpoint = -2
+state = 2
+send_to_groups = Array[int]([1])
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+mass = 2.46
+physics_material_override = SubResource("PhysicsMaterial_aiinm")
+custom_integrator = true
+max_contacts_reported = 1
+contact_monitor = true
+linear_velocity = Vector2(0, 150)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
+texture = ExtResource("2_xt6c4")
+region_rect = Rect2(307, 149, 49, 47)
+region_filter_clip_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_e22st")
+
+[connection signal="body_entered" from="RigidBody2D" to="." method="calc_collision"]

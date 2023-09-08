@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://ony7p72885gk"]
+
+[ext_resource type="Script" path="res://assets/items/locations/final_edge.gd" id="1_ngncq"]
+
+[node name="final_edge" type="Node2D"]
+script = ExtResource("1_ngncq")
+item_name = "final_edge"
+state = 3
+
+[node name="final_edge" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="final_edge"]
+polygon = PackedVector2Array(23, 630, 1139, 632, 21, 630)

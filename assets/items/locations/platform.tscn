@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://dk2mfg08mb8h7"]
+
+[ext_resource type="Script" path="res://assets/items/locations/platform_.gd" id="1_xwkmh"]
+[ext_resource type="Script" path="res://assets/items/locations/platform.gd" id="2_rec4g"]
+[ext_resource type="Texture2D" uid="uid://c2174rklwcv6l" path="res://assets/textures/main/paddleRed.png" id="3_rqtiw"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0x7fp"]
+radius = 11.0
+height = 166.0
+
+[node name="platform" type="Node2D"]
+script = ExtResource("1_xwkmh")
+
+[node name="platform" type="CharacterBody2D" parent="."]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("2_rec4g")
+metadata/_edit_group_ = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="platform"]
+offset_left = -91.0
+offset_top = -11.0
+offset_right = 79.0
+offset_bottom = 12.0
+texture = ExtResource("3_rqtiw")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platform"]
+position = Vector2(-6, 1)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_0x7fp")
+
+[node name="ball_pos" type="Node2D" parent="platform"]
+position = Vector2(0, -44)

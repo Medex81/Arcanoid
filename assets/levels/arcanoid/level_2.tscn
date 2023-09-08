@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://6fm0vge524l5"]
+
+[ext_resource type="PackedScene" uid="uid://cnksy1giod5d2" path="res://assets/levels/level_tmp.tscn" id="1_oaai8"]
+[ext_resource type="Script" path="res://addons/GameTemplate/scripts/base_condition.gd" id="2_5j71k"]
+
+[sub_resource type="Resource" id="Resource_5n2fr"]
+script = ExtResource("2_5j71k")
+item_path = "res://assets/items/levels/tile_blue.tscn"
+count = 10.0
+set_inventory = false
+
+[node name="level" instance=ExtResource("1_oaai8")]
+add_to_groups = Array[int]([0])
+conditions = Array[ExtResource("2_5j71k")]([SubResource("Resource_5n2fr")])
+
+[node name="level" parent="." index="0"]
+layer_0/tile_data = PackedInt32Array(-196611, 0, 65536, -131075, 0, 65536, -65539, 0, 65536, -3, 0, 65536, 65533, 0, 65536, 131069, 0, 65536, 196605, 0, 65536, 196606, 0, 65536, 196607, 0, 65536, 131072, 0, 65536, 131073, 0, 65536, 131074, 0, 65536, 65538, 0, 65536, 2, 0, 65536, -65534, 0, 65536, -131070, 0, 65536, -196606, 0, 65536, -262142, 0, 65536, -262143, 0, 65536, -262144, 0, 65536, -196609, 0, 65536, -196610, 0, 65536)

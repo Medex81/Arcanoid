@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://cxe380m6s7lxh"]
+
+[ext_resource type="Script" path="res://assets/items/levels/tile_blue.gd" id="1_13f18"]
+[ext_resource type="Texture2D" uid="uid://ckemjohofr5vt" path="res://assets/textures/main/element_blue_rectangle.png" id="2_tw1ux"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aj14y"]
+size = Vector2(60, 28)
+
+[node name="tile_blue" type="Node2D"]
+script = ExtResource("1_13f18")
+item_name = "blue_tail"
+drop_container = "res://assets/containers/cont_1.tscn"
+hitpoint = 1
+send_to_groups = Array[int]([0])
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_tw1ux")
+region_rect = Rect2(491, 259, 60, 30)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_aj14y")
