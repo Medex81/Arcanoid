@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://fsd84p3k0jbm"]
+
+[ext_resource type="PackedScene" uid="uid://tkbgssnnrqug" path="res://game/scenes/hud/ruby_bar.tscn" id="1_ga3cw"]
+[ext_resource type="Texture2D" uid="uid://b7evpgwxeun40" path="res://assets/textures/main/element_blue_polygon_glossy.png" id="2_njdqa"]
+
+[node name="base_bar" instance=ExtResource("1_ga3cw")]
+item_name = "ice_coin"
+
+[node name="pict" parent="MarginContainer/HBoxContainer" index="0"]
+texture = ExtResource("2_njdqa")

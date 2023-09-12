@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cfecwdlrlenss"]
+
+[ext_resource type="PackedScene" uid="uid://mggexn8ejeh" path="res://game/scenes/hud/base_bar.tscn" id="1_245kj"]
+[ext_resource type="Texture2D" uid="uid://ubc7tqkl8n41" path="res://assets/textures/main/ballBlue.png" id="2_2as0t"]
+
+[node name="base_bar" instance=ExtResource("1_245kj")]
+custom_minimum_size = Vector2(60, 30)
+anchor_left = 0.0748472
+anchor_right = 0.078
+offset_right = 96.144
+item_name = "ball"
+
+[node name="pict" parent="MarginContainer/HBoxContainer" index="0"]
+texture = ExtResource("2_2as0t")
+
+[node name="digit" parent="MarginContainer/HBoxContainer/visual" index="1"]
+visible = false

@@ -7,9 +7,6 @@ extends Location
 var _ball_res:Resource
 
 func _ready():
-	## Инициализируем минимальный набор сервисов необходимый в каждой игре
-	Services.resources
-	Services.inventory
 	super._ready()
 	_ball_res = load(ball_proj)
 	## Зогружаем уровень если указана директория с уровнями.
@@ -20,6 +17,7 @@ func _ready():
 		respown_ball()
 	else:
 		_logs.error("{0} location > level node for the level {1} wasn't loaded".format([name, _level_name]))
+			
 
 ## проиграли
 func close():
@@ -41,3 +39,5 @@ func condition_changed(_item_name:String, _count:int):
 func respown_ball():
 	var ball = _ball_res.instantiate()
 	$platform/platform/ball_pos.add_child(ball)
+
+

@@ -7,7 +7,7 @@
 script = ExtResource("2_8keww")
 item_path = "res://assets/items/levels/tile_blue.tscn"
 count = 10.0
-set_inventory = false
+set_inventory = true
 
 [node name="level" instance=ExtResource("1_4bvj6")]
 add_to_groups = Array[int]([0])

@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://2es8o1tl85ua"]
+
+[ext_resource type="PackedScene" uid="uid://tkbgssnnrqug" path="res://game/scenes/hud/ruby_bar.tscn" id="1_autjh"]
+[ext_resource type="Texture2D" uid="uid://dudthche6rrvi" path="res://assets/textures/main/element_yellow_polygon.png" id="2_rjym4"]
+
+[node name="base_bar" instance=ExtResource("1_autjh")]
+item_name = "gold_coin"
+
+[node name="pict" parent="MarginContainer/HBoxContainer" index="0"]
+texture = ExtResource("2_rjym4")

@@ -9,9 +9,10 @@ size = Vector2(60, 28)
 [node name="tile_blue" type="Node2D"]
 script = ExtResource("1_13f18")
 item_name = "blue_tail"
+item_count = -1
 drop_container = "res://assets/containers/cont_1.tscn"
 hitpoint = 1
-send_to_groups = Array[int]([0])
+send_to_groups = Array[int]([0, 1])
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_tw1ux")

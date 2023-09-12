@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://tkbgssnnrqug"]
+
+[ext_resource type="PackedScene" uid="uid://mggexn8ejeh" path="res://game/scenes/hud/base_bar.tscn" id="1_ch63u"]
+[ext_resource type="Texture2D" uid="uid://be7834l1e2oeq" path="res://assets/textures/main/element_red_polygon_glossy.png" id="2_d3i4y"]
+
+[node name="base_bar" instance=ExtResource("1_ch63u")]
+custom_minimum_size = Vector2(50, 30)
+anchor_left = 0.04
+anchor_top = 0.0201975
+anchor_right = 0.04
+anchor_bottom = 0.0201975
+offset_left = -46.08
+offset_right = 46.92
+item_name = "ruby_coin"
+
+[node name="pict" parent="MarginContainer/HBoxContainer" index="0"]
+texture = ExtResource("2_d3i4y")
+
+[node name="progress" parent="MarginContainer/HBoxContainer/visual" index="0"]
+visible = false

@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://c741dvdhpds01"]
+
+[ext_resource type="PackedScene" uid="uid://tkbgssnnrqug" path="res://game/scenes/hud/ruby_bar.tscn" id="1_rvibx"]
+[ext_resource type="Texture2D" uid="uid://ckemjohofr5vt" path="res://assets/textures/main/element_blue_rectangle.png" id="2_5876p"]
+
+[node name="base_bar" instance=ExtResource("1_rvibx")]
+custom_minimum_size = Vector2(40, 30)
+anchor_left = 0.0356597
+anchor_top = 0.0171111
+anchor_right = 0.0356597
+anchor_bottom = 0.0171111
+offset_top = -13.088
+offset_bottom = 26.912
+item_name = "blue_tail"
+
+[node name="HBoxContainer" parent="MarginContainer" index="0"]
+theme_override_constants/separation = 10
+
+[node name="pict" parent="MarginContainer/HBoxContainer" index="0"]
+texture = ExtResource("2_5876p")
+
+[node name="visual" parent="MarginContainer/HBoxContainer" index="1"]
+size_flags_stretch_ratio = 15.31
+theme_override_constants/separation = 10
+
+[node name="progress" parent="MarginContainer/HBoxContainer/visual" index="0"]
+custom_minimum_size = Vector2(0, 30)
+
+[node name="digit" parent="MarginContainer/HBoxContainer/visual" index="1"]
+custom_minimum_size = Vector2(0, 0)
+size_flags_stretch_ratio = 0.0

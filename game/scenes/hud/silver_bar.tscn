@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://qvnu0lpxl13s"]
+
+[ext_resource type="PackedScene" uid="uid://tkbgssnnrqug" path="res://game/scenes/hud/ruby_bar.tscn" id="1_fq3ig"]
+[ext_resource type="Texture2D" uid="uid://dsmltuk7mihrj" path="res://assets/textures/main/element_grey_polygon.png" id="2_mhr5n"]
+
+[node name="base_bar" instance=ExtResource("1_fq3ig")]
+item_name = "silver_coin"
+
+[node name="pict" parent="MarginContainer/HBoxContainer" index="0"]
+texture = ExtResource("2_mhr5n")
+
+[node name="progress" parent="MarginContainer/HBoxContainer/visual" index="0"]
+custom_minimum_size = Vector2(0, 30)
+
+[node name="digit" parent="MarginContainer/HBoxContainer/visual" index="1"]
+custom_minimum_size = Vector2(0, 0)
+size_flags_stretch_ratio = 20.0

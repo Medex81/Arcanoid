@@ -1,0 +1,63 @@
+[gd_scene load_steps=4 format=3 uid="uid://mggexn8ejeh"]
+
+[ext_resource type="Script" path="res://game/scenes/hud/base_bar.gd" id="1_k3otx"]
+[ext_resource type="Texture2D" uid="uid://dp56kost1pjfm" path="res://addons/GameTemplate/scenes/splash/logo.png" id="2_4vjta"]
+[ext_resource type="PackedScene" uid="uid://ce8p70vv8hcbu" path="res://addons/GameTemplate/scenes/progress/progress.tscn" id="3_ryy33"]
+
+[node name="base_bar" type="Control"]
+layout_mode = 3
+anchor_left = 0.081
+anchor_top = 0.031
+anchor_right = 0.081
+anchor_bottom = 0.031
+offset_left = -93.312
+offset_top = -20.088
+offset_right = 92.688
+offset_bottom = 19.912
+script = ExtResource("1_k3otx")
+metadata/_edit_use_anchors_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+theme_override_constants/separation = 5
+
+[node name="pict" type="TextureRect" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("2_4vjta")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="visual" type="HBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 4.75
+
+[node name="progress" parent="MarginContainer/HBoxContainer/visual" instance=ExtResource("3_ryy33")]
+custom_minimum_size = Vector2(50, 30)
+layout_mode = 2
+size_flags_stretch_ratio = 5.25
+
+[node name="digit" type="Label" parent="MarginContainer/HBoxContainer/visual"]
+custom_minimum_size = Vector2(20, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 1.8
+text = "0"
+vertical_alignment = 1
