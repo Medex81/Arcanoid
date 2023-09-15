@@ -15,8 +15,7 @@ size = Vector2(45, 44)
 position = Vector2(0, 1)
 script = SubResource("GDScript_mdcni")
 item_name = "ice_coin"
-drop_probability = 50
-hitpoint = -2
+drop_probability = 40
 state = 2
 send_to_groups = Array[int]([1])
 

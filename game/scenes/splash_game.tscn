@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://di3j51yak8lvs"]
+
+[ext_resource type="PackedScene" uid="uid://b4fiaijnbu4kl" path="res://addons/GameTemplate/scenes/splash/splash.tscn" id="1_mp0w1"]
+[ext_resource type="Texture2D" uid="uid://bq6o5s63x11np" path="res://assets/textures/splash/splash.png" id="2_g5ghj"]
+[ext_resource type="Texture2D" uid="uid://b78rj8v3h1rer" path="res://assets/textures/splash/ik.png" id="3_cxuft"]
+[ext_resource type="Texture2D" uid="uid://d1gcpag5k0ofh" path="res://assets/textures/splash/title.png" id="4_q00dq"]
+
+[node name="splash" instance=ExtResource("1_mp0w1")]
+_show_on_start = false
+next_scene = "res://game/locations/arcanoid/arcanoid.tscn"
+
+[node name="splash" parent="." index="0"]
+texture = ExtResource("2_g5ghj")
+expand_mode = 1
+
+[node name="logo" parent="splash/frame" index="0"]
+texture = ExtResource("3_cxuft")
+
+[node name="title" parent="splash/frame" index="1"]
+texture = ExtResource("4_q00dq")

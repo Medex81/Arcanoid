@@ -10,6 +10,7 @@ bounce = 1.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_jeidu"]
 
 [node name="ball" type="Node2D"]
+position = Vector2(-3, 0)
 script = ExtResource("1_epuy6")
 item_name = "ball"
 item_count = -1
